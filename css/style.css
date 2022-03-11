@@ -1,3 +1,129 @@
 body{
-    
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.nav_item a:visited{
+    color: blue;
+}
+
+.card h3{
+    background-color: #288088;
+    border: 2px;
+    border-style: solid;
+    border-color: #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+.pricing{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.pricing header{
+    background-image: url("../images/concrete_seamless.png");
+}
+
+.pricing h4{
+    background-color: #fff;
+}
+
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px){
+    header{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav_links{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: absolute;
+        right:0;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    h3{
+        flex-basis: 250px;
+    }
+
+    .card{
+        display: flex;
+        flex-basis: 250px;
+    }
+}
+
+@media print{
+
+    body{
+        background-image: none;
+        background-color: white;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        display: flex;
+        flex-wrap: nowrap;
+        align-self: flex-end;
+    }
+
+    .card{
+        border: 2px solid #45ADDD;
+        display: flex;
+        flex-basis: 325px
+    }
+
+    .gallery{
+        display:none;
+    }
+
+    #gallery{
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
 }
